@@ -1,16 +1,15 @@
-from flask import Flask, render_template, request, redirect
+import os
 import mysql.connector
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
-# MySQL connection
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",       # your MySQL username
-    password="Yoga@mysql100#",  # your MySQL password
-    database="students_db"     # database name
+    host=os.environ.get("DB_HOST"),
+    user=os.environ.get("DB_USER"),
+    password=os.environ.get("DB_PASSWORD"),
+    database=os.environ.get("DB_NAME")
 )
-
 cursor = db.cursor()
 
 # Dashboard route
