@@ -8,23 +8,17 @@
     <div class="form-container">
         <h1>Edit Student</h1>
         <form method="POST">
-            <div class="form-group">
-                <label>Name:</label>
-                <input type="text" name="name" value="{{ student[1] }}" required>
-            </div>
+            <label>Name:</label>
+            <input type="text" name="name" value="{{ student.name }}" required>
 
-            <div class="form-group">
-                <label>Age:</label>
-                <input type="number" name="age" value="{{ student[2] }}" required>
-            </div>
+            <label>Age:</label>
+            <input type="number" name="age" value="{{ student.age }}" required>
 
-            <div class="form-group">
-                <label>Department:</label>
-                <input type="text" name="department" value="{{ student[3] }}" required>
-            </div>
+            <label>Department:</label>
+            <input type="text" name="department" value="{{ student.department }}" required>
 
             <div class="form-actions">
-                <a href="/" class="btn back">Back</a>
+                <a href="{{ url_for('index') }}" class="btn back">Back</a>
                 <button type="submit" class="btn submit">Update</button>
             </div>
         </form>

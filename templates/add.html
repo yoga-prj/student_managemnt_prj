@@ -8,25 +8,30 @@
     <div class="form-container">
         <h1>Add Student</h1>
         <form method="POST">
-            <div class="form-group">
-                <label>Name:</label>
-                <input type="text" name="name" required>
-            </div>
-
-            <div class="form-group">
-                <label>Age:</label>
-                <input type="number" name="age" required>
-            </div>
-
-            <div class="form-group">
-                <label>Department:</label>
-                <input type="text" name="department" required>
-            </div>
-
-            <div class="form-actions">
-                <a href="/" class="btn back">Back</a>
-                <button type="submit" class="btn submit">Add</button>
-            </div>
+            <table>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" id="name" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age:</label></td>
+                    <td><input type="number" id="age" name="age" required></td>
+                </tr>
+                <tr>
+                    <td><label for="department">Department:</label></td>
+                    <td><input type="text" id="department" name="department" required></td>
+                </tr>
+                <tr>
+                    <td><label for="marks">Marks:</label></td>
+                    <td><input type="number" id="marks" name="marks" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:center;">
+                        <a href="/" class="btn back">Back</a>
+                        <button type="submit" class="btn submit">Add</button>
+                    </td>
+                </tr>
+            </table>
         </form>
     </div>
 </body>
